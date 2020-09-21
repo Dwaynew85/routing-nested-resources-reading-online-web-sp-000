@@ -2428,3 +2428,9 @@ app/controllers/authors_controller.rb:3:in `posts_index'
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "posts" SET "created_at" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["created_at", "2020-09-20 00:00:00"], ["updated_at", "2020-09-21 05:35:36.157521"], ["id", 3]]
   [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/authors/1/posts" for 99.127.130.175 at 2020-09-21 05:36:02 +0000
+Cannot render console from 99.127.130.175! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthorsController#posts_index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
